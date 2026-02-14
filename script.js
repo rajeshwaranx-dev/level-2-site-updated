@@ -5,12 +5,12 @@ const moviesDatabase = [
     // Tamil Action Movies
     {
         id: 1,
-        title: "Vikram",
-        year: 2022,
+        title: "Thunivu",
+        year: 2023,
         quality: "HD",
         category: ["Tamil", "Action"],
-        image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=600&fit=crop",
-        telegramLink: "https://t.me/askmovies/vikram"
+        image: "https://image.tmdb.org/t/p/w1280/q2FGtGWg5MzQo2yhGPEPrRrdw4V.jpg",
+        telegramLink: "https://askmovies.lcubots.news/?start=fs_MjExOTM="
     },
     {
         id: 2,
@@ -18,8 +18,8 @@ const moviesDatabase = [
         year: 2023,
         quality: "HD",
         category: ["Tamil", "Action"],
-        image: "https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=400&h=600&fit=crop",
-        telegramLink: "https://t.me/askmovies/leo"
+        image: "https://image.tmdb.org/t/p/w1280/2XUHC4lp3tDsgfFLFygNZ2x2Um9.jpg",
+        telegramLink: "https://askmovies.lcubots.news/?start=fs_MjEyMDA="
     },
     {
         id: 3,
