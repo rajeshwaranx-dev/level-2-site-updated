@@ -1,10 +1,9 @@
 // ============================================
 // PROFESSIONAL LEVEL 2 MOVIE WEBSITE SCRIPT
-// Search + Multiple Category Filter + Telegram Redirect
 // ============================================
 
 // ================= MOVIE DATABASE =================
-const moviesDatabase = [
+const movies = [
     {
         title: "Joe's College Road Trip",
         year: 2025,
@@ -33,10 +32,9 @@ const moviesDatabase = [
 
 
 // ===================================
-// AUTO INCREMENT ID SYSTEM
+// AUTO INCREMENT ID SYSTEM (FIXED)
 // ===================================
-
-moviesDatabase.forEach((movie, index) => {
+movies.forEach((movie, index) => {
     movie.id = index + 1;
 });
 
@@ -48,7 +46,7 @@ let searchTerm = "";
 
 // ================= INITIALIZATION =================
 document.addEventListener("DOMContentLoaded", () => {
-    renderMovies(moviesDatabase);
+    renderMovies(movies);
     initSearch();
     initCategoryFilter();
     initMobileMenu();
@@ -60,16 +58,18 @@ function renderMovies(movieList) {
     const moviesGrid = document.getElementById("moviesGrid");
     const noResults = document.getElementById("noResults");
 
+    if (!moviesGrid) return; // safety check
+
     moviesGrid.innerHTML = "";
 
     if (movieList.length === 0) {
         moviesGrid.style.display = "none";
-        noResults.style.display = "block";
+        if (noResults) noResults.style.display = "block";
         return;
     }
 
     moviesGrid.style.display = "grid";
-    noResults.style.display = "none";
+    if (noResults) noResults.style.display = "none";
 
     movieList.forEach(movie => {
         const card = createMovieCard(movie);
@@ -112,7 +112,7 @@ function createMovieCard(movie) {
 
 // ================= FILTER LOGIC =================
 function applyFilters() {
-    let filtered = moviesDatabase;
+    let filtered = movies;
 
     if (selectedCategory !== "all") {
         filtered = filtered.filter(movie =>
@@ -178,6 +178,5 @@ function initMobileMenu() {
     });
 }
 
-
-console.log("🎬 Professional Movie Website Loaded");
-console.log("Total movies:", moviesDatabase.length);
+console.log("🎬 Movie Website Loaded");
+console.log("Total movies:", movies.length);
