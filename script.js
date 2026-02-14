@@ -3,6 +3,15 @@
 // ===================================
 const moviesDatabase = [
     // Tamil Action Movies
+        {
+        id: 1,
+        title: "Joe's College Road Trip",
+        year: 2025,
+        quality: "HD",
+        category: ["Tamil", "Telugu", "Hindi", "English"],
+        image: "https://graph.org/file/fe11e89059e47faf70f69-eb7d57f879051d5f1d.jpg",
+        telegramLink: "https://askmovies.lcubots.news/?start=fs_MjEwODU="
+    },
     {
         id: 1,
         title: "Thunivu",
