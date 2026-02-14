@@ -3,48 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AskMovies - Premium Movie Listing</title>
+    <meta name="description" content="AskMovies - Your ultimate movie streaming destination">
+    <title>AskMovies - Premium Movie Collection</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <!-- Header Section -->
     <header class="header">
-        <div class="logo">AskMovies<span>.</span></div>
-        
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search movies, titles...">
-            <button id="searchBtn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">AskMovies</h1>
+                <button class="mobile-menu-toggle" aria-label="Toggle search menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <div class="filter-section">
-        <div class="category-wrapper" id="categoryContainer">
+    <!-- Search & Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-wrapper">
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Search movies..."
+                        aria-label="Search movies"
+                    >
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="category-filters" id="categoryFilters">
+                    <button class="category-btn active" data-category="All">All</button>
+                    <button class="category-btn" data-category="Tamil">Tamil</button>
+                    <button class="category-btn" data-category="English">English</button>
+                    <button class="category-btn" data-category="Action">Action</button>
+                    <button class="category-btn" data-category="HD">HD</button>
+                    <button class="category-btn" data-category="PreDvd">PreDvd</button>
+                </div>
             </div>
-    </div>
-
-    <main class="container">
-        <div class="results-info" id="resultsInfo"></div>
-
-        <div class="movie-grid" id="movieGrid">
-            </div>
-
-        <div id="noResults" class="no-results hidden">
-            <h2>No Results Found</h2>
-            <p>Try adjusting your search or category filter.</p>
         </div>
+    </section>
 
-        <div class="pagination" id="pagination">
-            <button id="prevBtn" class="page-btn">Previous</button>
-            <div id="pageNumbers" class="page-numbers"></div>
-            <button id="nextBtn" class="page-btn">Next</button>
+    <!-- Movies Grid Section -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Results Info -->
+            <div class="results-info" id="resultsInfo"></div>
+
+            <!-- Movie Grid -->
+            <div class="movie-grid" id="movieGrid">
+                <!-- Movies will be dynamically inserted here -->
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <h2>No Results Found</h2>
+                <p>Try adjusting your search or filter criteria</p>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be dynamically inserted here -->
+            </div>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 AskMovies. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 AskMovies. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
