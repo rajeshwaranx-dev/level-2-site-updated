@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskMovies - Premium Movie Listing</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <header class="header">
+        <div class="logo">AskMovies<span>.</span></div>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search movies, titles...">
+            <button id="searchBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="filter-section">
+        <div class="category-wrapper" id="categoryContainer">
+            </div>
+    </div>
+
+    <main class="container">
+        <div class="results-info" id="resultsInfo"></div>
+
+        <div class="movie-grid" id="movieGrid">
+            </div>
+
+        <div id="noResults" class="no-results hidden">
+            <h2>No Results Found</h2>
+            <p>Try adjusting your search or category filter.</p>
+        </div>
+
+        <div class="pagination" id="pagination">
+            <button id="prevBtn" class="page-btn">Previous</button>
+            <div id="pageNumbers" class="page-numbers"></div>
+            <button id="nextBtn" class="page-btn">Next</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 AskMovies. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
